@@ -5,7 +5,7 @@
 Напишите код, который будет проверять правильность работы вашего кода.
 */
 
- /* В отличие от примера, приведенного в теории к уроку №7 удалось сделать сложность вставки О(1) вместо О(n) */
+ /* В отличие от примера, приведенного в теории к уроку №7 сложность вставки О(1) вместо О(n) */
 
 
 #include <iostream>
@@ -108,7 +108,7 @@ class RingQueue {
     class iterator : public std::iterator<std::bidirectional_iterator_tag, T> {
         RingQueue<T>* ringQueue;
         int current_pos;
-        int flag = -1;
+        int flag = -1; // для реализации итерирования по очереди с отличием конца от начала
 
         public:
         iterator(RingQueue<T>* _ring, int position) {
@@ -146,14 +146,12 @@ class RingQueue {
         bool operator !=(const iterator& rhs) { return !(*this == rhs); }
     };
     
-    iterator& begin() {
+    iterator begin() {
         iterator iter(this, _begin);
-        //std::cout << &ring[0] << "< - begin \n";
         return iter;
     }
-    iterator& end() {
+    iterator end() {
         iterator iter(this, _end);
-        //std::cout << &ring[size-1] << "< - end \n";
         return iter;
     }
 };
@@ -175,13 +173,8 @@ void main() {
     std::cout << "Last elem (2): " << ring.back() << "\n";
     std::cout << "Is Full? (true): " << (ring.isFull() ? "true" : "false") << "\n";
     std::cout << "Iterator from begin to end (5 4 3 2): ";
-    auto end = ring.end();
-    for(RingQueue<double>::iterator i = ring.begin(); i != end; ++i)
+    for(RingQueue<double>::iterator i = ring.begin(); i != ring.end(); ++i)
         std::cout << *i << ' ';
-    std::cout << "\n\n";
-
-    for(auto i : ring)
-        std::cout << i << ' ';
     std::cout << "\n\n";
 
     ring.pop();
