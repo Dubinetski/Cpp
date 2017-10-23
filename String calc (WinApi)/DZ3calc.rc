@@ -1,0 +1,206 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_DZ3CALC             ICON                    "DZ3calc.ico"
+
+IDI_SMALL               ICON                    "small.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_DZ3CALC MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_DZ3CALC ACCELERATORS
+BEGIN
+    "0",            IDC_BTN0,               VIRTKEY, NOINVERT
+    VK_NUMPAD0,     IDC_BTN0,               VIRTKEY, NOINVERT
+    "1",            IDC_BTN1,               VIRTKEY, NOINVERT
+    VK_NUMPAD1,     IDC_BTN1,               VIRTKEY, NOINVERT
+    "2",            IDC_BTN2,               VIRTKEY, NOINVERT
+    VK_NUMPAD2,     IDC_BTN2,               VIRTKEY, NOINVERT
+    "3",            IDC_BTN3,               VIRTKEY, NOINVERT
+    VK_NUMPAD3,     IDC_BTN3,               VIRTKEY, NOINVERT
+    "4",            IDC_BTN4,               VIRTKEY, NOINVERT
+    VK_NUMPAD4,     IDC_BTN4,               VIRTKEY, NOINVERT
+    "5",            IDC_BTN5,               VIRTKEY, NOINVERT
+    VK_NUMPAD5,     IDC_BTN5,               VIRTKEY, NOINVERT
+    "6",            IDC_BTN6,               VIRTKEY, NOINVERT
+    VK_NUMPAD6,     IDC_BTN6,               VIRTKEY, NOINVERT
+    "7",            IDC_BTN7,               VIRTKEY, NOINVERT
+    VK_NUMPAD7,     IDC_BTN7,               VIRTKEY, NOINVERT
+    "8",            IDC_BTN8,               VIRTKEY, NOINVERT
+    VK_NUMPAD8,     IDC_BTN8,               VIRTKEY, NOINVERT
+    "9",            IDC_BTN9,               VIRTKEY, NOINVERT
+    VK_NUMPAD9,     IDC_BTN9,               VIRTKEY, NOINVERT
+    "9",            IDC_BtnBRL,             VIRTKEY, SHIFT, NOINVERT
+    "0",            IDC_BtnBRR,             VIRTKEY, SHIFT, NOINVERT
+    VK_RETURN,      IDC_BtnCALC,            VIRTKEY, NOINVERT
+    VK_ESCAPE,      IDC_BtnClr,             VIRTKEY, NOINVERT
+    VK_BACK,        IDC_BtnDel,             VIRTKEY, NOINVERT
+    VK_DIVIDE,      IDC_BtnDiv,             VIRTKEY, NOINVERT
+    VK_OEM_MINUS,   IDC_BtnMinus,           VIRTKEY, NOINVERT
+    VK_SUBTRACT,    IDC_BtnMinus,           VIRTKEY, NOINVERT
+    VK_MULTIPLY,    IDC_BtnMulti,           VIRTKEY, NOINVERT
+    VK_OEM_COMMA,   IDC_BtnPoint,           VIRTKEY, NOINVERT
+    VK_OEM_PERIOD,  IDC_BtnPoint,           VIRTKEY, NOINVERT
+    VK_ADD,         IDC_BtnSUMM,            VIRTKEY, NOINVERT
+    VK_OEM_PLUS,    IDC_BtnSUMM,            VIRTKEY, NOINVERT
+    VK_DECIMAL,     IDC_BtnPoint,           VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CALC DIALOGEX 0, 0, 129, 165
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Simple calc"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "0",IDC_BTN0,6,138,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "1",IDC_BTN1,6,114,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "2",IDC_BTN2,36,114,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "3",IDC_BTN3,66,114,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "4",IDC_BTN4,6,90,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "5",IDC_BTN5,36,90,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "6",IDC_BTN6,66,90,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "7",IDC_BTN7,6,66,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "8",IDC_BTN8,36,66,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "9",IDC_BTN9,66,66,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      ",",IDC_BtnPoint,36,138,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "+",IDC_BtnSUMM,96,138,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "-",IDC_BtnMinus,96,114,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "*",IDC_BtnMulti,96,90,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "/",IDC_BtnDiv,96,66,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "(",IDC_BtnBRL,6,42,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      ")",IDC_BtnBRR,36,42,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "=",IDC_BtnCALC,66,138,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "Clr",IDC_BtnClr,66,42,24,19,NOT WS_TABSTOP
+    PUSHBUTTON      "Del",IDC_BtnDel,96,42,24,19,NOT WS_TABSTOP
+    EDITTEXT        IDC_TextFild,6,6,114,30,ES_RIGHT | ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_DISABLED | NOT WS_TABSTOP,WS_EX_LEFTSCROLLBAR
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_CALC, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE           "DZ_3 (calc)"
+    IDC_DZ3CALC             "DZ3CALC"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
